@@ -32,9 +32,9 @@ public class TaskServiceImpl implements TaskService {
 	}
 
 	@Override
-	public void updateTask(ToDoTask toDoTask) {
+	public ToDoTask updateTask(ToDoTask toDoTask) {
 
-		toDoTaskRepository.save(toDoTask);
+		return toDoTaskRepository.save(toDoTask);
 
 	}
 

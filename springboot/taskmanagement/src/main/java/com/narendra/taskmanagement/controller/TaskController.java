@@ -51,8 +51,8 @@ public class TaskController {
 	
 	//update task
 	@PutMapping("/todo")
-	public void updateTod(@RequestBody ToDoTask toDoTask) {
-		taskService.updateTask(toDoTask);
+	public ToDoTask updateTod(@RequestBody ToDoTask toDoTask) {
+		return taskService.updateTask(toDoTask);
 		
 	}
 	

@@ -10,7 +10,7 @@ public interface TaskService {
 	
 	public ToDoTask addTask(ToDoTask toDoTask);
 	
-	public void updateTask(ToDoTask toDoTask);
+	public ToDoTask updateTask(ToDoTask toDoTask);
 	
 	public void deleteTask(Integer id);
 
