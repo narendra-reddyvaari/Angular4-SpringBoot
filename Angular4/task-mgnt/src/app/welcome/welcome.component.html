@@ -1,0 +1,54 @@
+<div class="panel panel-info">
+    <div class='panel-heading'>About
+    </div>
+
+    <div class="panel-body">Sample Application By Narendra Babu Reddyvaari.
+        <a href="https://www.linkedin.com/in/narendrareddyvaari/" class="btn btn-link" role="button">@LinkedIn</a>
+    </div>
+</div>
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        Task Management
+    </div>
+
+    <!-- Filter the Products   -->
+    <div class='panel-body'>
+        <div class='row'>
+            
+            <div class='col-md-3'>
+                <input type='text' [(ngModel)]='description' placeholder="Task Description" />
+            </div>
+            <div class='col-md-2'>
+                <button class='btn btn-primary' (click)='addTask()'>
+                    Add Task
+                </button>
+            </div>
+        </div>
+
+
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+        <div class='table-responsive'>
+            <table class='table' *ngIf='tasks && tasks.length'>
+                <thead>
+                    <tr>
+
+                        <th>Id</th>
+                        <th>description</th>
+                        <th data-toggle="tooltip" title="Green:Completed,Red:In Complete">Status</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let task of tasks'>
+
+                        <td>{{ task.id}}</td>
+                        <td>{{ task.description }}</td>
+                        <td>{{ task.completed }}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
