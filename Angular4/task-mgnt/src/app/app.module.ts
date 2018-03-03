@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { TaskService } from './task.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EdittaskComponent } from './edittask/edittask.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
+    EdittaskComponent,
   ],
   imports: [
     BrowserModule,

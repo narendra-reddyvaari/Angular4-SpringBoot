@@ -39,4 +39,13 @@ export class TaskService {
       .catch(this.handleErrorObservable);
   }
 
+  updateTask(task: ITask): Observable<ITask> {
+
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ method: RequestMethod.Put, headers: headers });
+    return this.http.put(this.baseUrl, task, options)
+      .map(res => res.json() as Observable<ITask>)
+      .catch(this.handleErrorObservable);
+  }
+
 }
