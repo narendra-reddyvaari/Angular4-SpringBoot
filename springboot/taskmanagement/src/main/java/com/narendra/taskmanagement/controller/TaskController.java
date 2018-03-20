@@ -63,7 +63,7 @@ public class TaskController {
 		
 	}
 	
-	//to initialize tasks for testing. This end point is called from front end
+	//to initialize tasks for testing. This end point is not called from front end
 	@GetMapping("/addtodotasks")
 	public String addtodotasks() {
 		
